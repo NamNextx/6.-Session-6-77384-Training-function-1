@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="alertMesseger()">
+
+<div>
+    <h2>Bai tap 2 </h2>
+    <input type="number" id="idBt2">
+    <input value="Tang len 1 don vi" type="button" onclick="sumDoiSoLen1(parseInt(document.getElementById('idBt2').value))">
+</div>
+
+<div>
+    <!--Bài 3: Tạo hàm nhận vào hai tham số. Nếu giá trị của tham số thứ nhất lớn hơn tham số thứ hai,
+    hiển thị hộp thoại thông báo cho người dùng.
+    Nếu giá trị của tham số thứ nhất nhỏ hơn hoặc bằng tham số thứ hai, trả về tổng của hai tham số.-->
+    <input id="idInput1" type="number">
+    <input id="idInput2" type="number">
+    <input type="button" value="Bai tap 3" onclick="checkThamSo(parseInt(document.getElementById('idInput1').value), parseInt(document.getElementById('idInput2').value))">
+</div>
+
+
+<script>
+    function alertMesseger() {
+        alert("Hello my name is Nam")
+    }
+
+    function sumDoiSoLen1(number) {
+        let so = number;
+        alert(parseInt(so + 1));
+    }
+
+    function checkThamSo(thamSo1, thamSo2) {
+        let a=parseInt(thamSo1);
+        let b=parseInt(thamSo2);
+        if (thamSo1 > thamSo2) {
+            alert("Tham so thu nhat lon hon tham so thu 2");
+        } else if ((thamSo1 < thamSo2) || (thamSo1 == thamSo2)) {
+            alert("Tong cua hai tham so la: "+ parseInt(a+b));
+        }
+    }
+</script>
+</body>
+</html>
